@@ -1,0 +1,13 @@
+.formDiv {    
+padding: 21px;    
+ border-radius: 5px;    
+ background-color: #f2f2f2;    
+}    
+.Row {
+  display: table;
+  width: 100%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px; /*Optional*/
+} 
+   
+    

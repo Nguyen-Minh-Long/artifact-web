@@ -1,0 +1,53 @@
+import React from 'react';
+import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom';
+
+import Cryo from './Elements/Cryo';
+import Pyro from './Elements/Pyro';
+import Electro from './Elements/Electro/';
+import Hydro from './Elements/Hydro';
+import Ameno from './Elements/Ameno';
+import Geo from './Elements/Geo';
+import Other from './Elements/Other';
+import Navbar from './Components/Navbar/Navbar';
+
+const App = () => {
+  return (
+   <Router>
+    <Navbar/>
+    <main>
+      <Switch>
+        <Route path="/" exact>
+          <Cryo/>
+        </Route>
+        <Route path="/pyro" exact>
+          <Pyro/>
+        </Route>
+        <Route path="/electro" exact>
+          <Electro/>
+        </Route>
+        <Route path="/hydro" exact>
+          <Hydro />
+        </Route>
+        <Route path="/ameno" exact>
+          <Ameno />
+        </Route>
+        <Route path="/geo" exact>
+          <Geo />
+        </Route>
+        <Route path="/other" exact>
+          <Other />
+        </Route>
+        <Redirect to="/" />
+      </Switch>
+    </main>
+   </Router>
+  );
+}
+
+export default App;
