@@ -94,7 +94,7 @@ const Characters = {
         type: "Dòng Hồi Ức",
         name: "Hoa",
         command: "!giveart 24194 10001 atk atk%,6 cr cdmg 21",
-        img: "image.png"
+        img: "https://img.game8.co/3397406/c57cbad645fd6d8360fc5dd16fe0ec3f.png/show"
       },
       Lông: {
         type: "Dòng Hồi Ức",
