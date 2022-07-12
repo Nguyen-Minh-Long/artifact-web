@@ -38,7 +38,7 @@ const Characters = {
       Ly: {
         type: "Dư Âm Tế Lễ",
         name: "Ly",
-        command: "!giveart 24681 15008 atk% hp% cr,6 cdmg 21",
+        command: "!giveart 98514 15011 atk% hp% cr cdmg,6 21",
         img: "https://img.game8.co/3505558/039547e35abc77f7a50737f189a93761.png/show"
       }
       ,

@@ -91,16 +91,16 @@ const Characters = {
     name: Shenhe,
     artifacts: {
       Hoa: {
-        type: "Giác Đấu Sĩ",
+        type: "Dòng Hồi Ức",
         name: "Hoa",
         command: "!giveart 24194 10001 atk atk%,6 cr cdmg 21",
-        img: "https://img.game8.co/3357144/3d2b0affd32f16c9a5aff0af91ba81f3.png/show"
+        img: "image.png"
       },
       Lông: {
-        type: "Giác Đấu Sĩ",
+        type: "Dòng Hồi Ức",
         name: "Lông",
         command: "!giveart 24192 10003 atk%,6 em cr cdmg 21",
-        img: "https://img.game8.co/3357143/4e94ca3572c48b7ac120bda8f4518abc.png/show"
+        img: "https://img.game8.co/3397427/2174d53e5449fcbfbcc0b8e89b11edcb.png/show"
       }
       ,
       Đồng_Hồ: {
@@ -111,17 +111,17 @@ const Characters = {
       }
       ,
       Ly: {
-        type: "Dòng Hồi Ức",
+        type: "Giác Đấu Sĩ",
         name: "Ly",
         command: "!giveart 75514 10004 atk,6 em cr cdmg 21",
-        img: "https://img.game8.co/3397426/c7e39a858bee158ca040e0032dcfbb41.png/show"
+        img: "https://img.game8.co/3357147/330236844301709a99de1193953c8661.png/show"
       }
       ,
       Mũ: {
-        type: "Dòng Hồi Ức",
+        type: "Giác Đấu Sĩ",
         name: "Mũ",
-        command: "!giveart 24193 30990 cdmg cr 989001,2 atk,6 21",
-        img: "https://img.game8.co/3397428/7d12f9e3cb1549d8de9e82dcdcfafeba.png/show"
+        command: "!giveart 75534 30990 cdmg cr 989001,2 atk,6 21",
+        img: "https://img.game8.co/3357146/5c16b44ab5d669dee3cc328cd69b4489.png/show"
       }
     }
   },

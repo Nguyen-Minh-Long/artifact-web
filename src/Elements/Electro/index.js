@@ -152,7 +152,7 @@ const Characters = {
       Ly: {
         type: "Dấu Ấn",
         name: "Ly",
-        command: "!giveart 94514 10004 986001 er cr cdmg,6 21",
+        command: "!giveart 94514 10004 atk er cr cdmg,6 21",
         img: "https://img.game8.co/3397430/e0c85c3bb4c2e02116dc958fbfaf6185.png/show"
       }
       ,
