@@ -113,9 +113,16 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/other" exact>
+            <NavLink className="nav-link" to="/dendro" exact>
               <i
                 className="fas fa-solid fa-seedling">
+              </i>Dendro
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/other" exact>
+              <i
+                className="fas fa fa-cog">
               </i>Other
             </NavLink>
           </li>

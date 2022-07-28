@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -169,9 +170,7 @@ const Characters = {
 
 function Pyro() {
 
-  const handleNotify = () => {
-    toast.success('successful')
-  }
+  const [isActive, setIsActive] = useState(false);
 
   const CharactersValues = Object.values(Characters)
 
@@ -179,14 +178,26 @@ function Pyro() {
     const ArtifactValues = Object.values(Characters.artifacts)
     const ArtifactRows = ArtifactValues.map((artifact, i) => {
       const CharactersName = i === 0 ? <td rowSpan={ArtifactValues.length + 1}>
-        <img src={Characters.name} alt='Character' style={{ width: '300px', height: '300px' }} /></td> : null
+        <img src={Characters.name} alt='Character' style={{ width: '350px', height: '350px' }} /></td> : null
       return (
         <tr key={i}>
           {CharactersName}
-          <td><img src={artifact.img || ''} alt='' style={{ width: '12%' }} />&ensp; {artifact.type}</td>
-          <td>{artifact.name}</td>
+          <td><img src={artifact.img || ''} alt='' style={{ width: '50px', height: '50px' }} /><nobr>&ensp; {artifact.type}</nobr></td>
+          <td style={{paddingTop: "25px"}}>{artifact.name}</td>
           <CopyToClipboard text={artifact.command}>
-            <td onClick={handleNotify}><p className="noselect">&ensp; {artifact.command}</p></td>
+            <td
+              onClick={
+                () => {
+                  setIsActive(artifact.command);
+                  toast.success('Copy Successful')
+                }
+              }
+              style={isActive === artifact.command ? {
+                color: "#00ff00",
+                paddingTop: "25px"
+              } : {paddingTop: "25px"}}
+            >
+              <p className="noselect">{artifact.command}</p></td>
           </CopyToClipboard>
         </tr>
       )

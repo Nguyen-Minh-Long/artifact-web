@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,6 +10,7 @@ import Ei from '../../CharacterImage/Ei.png'
 import Keqing from '../../CharacterImage/Keqing.png'
 import Yae from '../../CharacterImage/Yae.png'
 import Sara from '../../CharacterImage/Sara.png'
+import Dori from '../../CharacterImage/Dori.png'
 
 
 const Characters = {
@@ -163,14 +165,50 @@ const Characters = {
         img: "https://img.game8.co/3397431/c9c41d27b898d1fe5f08adbe676c9fc0.png/show"
       }
     }
+  },
+  Dori: {
+    name: Dori,
+    artifacts: {
+      Hoa: {
+        type: "Hoàng Kim",
+        name: "Hoa",
+        command: "!giveart 21544 10001 atk% atk cr cdmg,6 21",
+        img: ""
+      },
+      Lông: {
+        type: "Hoàng Kim",
+        name: "Lông",
+        command: "!giveart 21524 10003 atk% em cr cdmg,6 21",
+        img: ""
+      }
+      ,
+      Đồng_Hồ: {
+        type: "Hoàng Kim",
+        name: "Đồng Hồ",
+        command: "!giveart 21554 10002 atk em cr cdmg,6 21",
+        img: ""
+      }
+      ,
+      Ly: {
+        type: "Hoàng Kim",
+        name: "Ly",
+        command: "!giveart 21514 15009 atk% atk cr cdmg,6 21",
+        img: ""
+      }
+      ,
+      Mũ: {
+        type: "Hoàng Kim",
+        name: "Mũ",
+        command: "!giveart 21534 30950 atk% atk 989001,2 cr,6 21",
+        img: ""
+      }
+    }
   }
 };
 
 function Electro() {
 
-  const handleNotify = () => {
-    toast.success('successful')
-  }
+  const [isActive, setIsActive] = useState(false);
 
   const CharactersValues = Object.values(Characters)
 
@@ -178,14 +216,26 @@ function Electro() {
     const ArtifactValues = Object.values(Characters.artifacts)
     const ArtifactRows = ArtifactValues.map((artifact, i) => {
       const CharactersName = i === 0 ? <td rowSpan={ArtifactValues.length + 1}>
-        <img src={Characters.name} alt='Character' style={{ width: '300px', height: '300px' }} /></td> : null
+        <img src={Characters.name} alt='Character' style={{ width: '350px', height: '350px' }} /></td> : null
       return (
         <tr key={i}>
           {CharactersName}
-          <td><img src={artifact.img || ''} alt='' style={{ width: '12%' }} />&ensp; {artifact.type}</td>
-          <td>{artifact.name}</td>
+          <td><img src={artifact.img || ''} alt='' style={{ width: '50px', height: '50px' }} /><nobr>&ensp; {artifact.type}</nobr></td>
+          <td style={{paddingTop: "25px"}}>{artifact.name}</td>
           <CopyToClipboard text={artifact.command}>
-            <td onClick={handleNotify}><p className="noselect">&ensp; {artifact.command}</p></td>
+            <td
+              onClick={
+                () => {
+                  setIsActive(artifact.command);
+                  toast.success('Copy Successful')
+                }
+              }
+              style={isActive === artifact.command ? {
+                color: "#00ff00",
+                paddingTop: "25px"
+              } : {paddingTop: "25px"}}
+            >
+              <p className="noselect">{artifact.command}</p></td>
           </CopyToClipboard>
         </tr>
       )

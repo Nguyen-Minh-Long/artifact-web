@@ -13,6 +13,7 @@ import Electro from './Elements/Electro/';
 import Hydro from './Elements/Hydro';
 import Ameno from './Elements/Ameno';
 import Geo from './Elements/Geo';
+import Dendro from './Elements/Dendro';
 import Other from './Elements/Other';
 import Navbar from './Components/Navbar/Navbar';
 
@@ -39,6 +40,9 @@ const App = () => {
         </Route>
         <Route path="/geo" exact>
           <Geo />
+        </Route>
+        <Route path="/dendro" exact>
+          <Dendro />
         </Route>
         <Route path="/other" exact>
           <Other />
