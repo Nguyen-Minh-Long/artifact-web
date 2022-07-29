@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/artifact-web/static/css/main.d8357a35.chunk.css",
-    "main.js": "/artifact-web/static/js/main.cf1b3c1a.chunk.js",
-    "main.js.map": "/artifact-web/static/js/main.cf1b3c1a.chunk.js.map",
+    "main.js": "/artifact-web/static/js/main.fad67e30.chunk.js",
+    "main.js.map": "/artifact-web/static/js/main.fad67e30.chunk.js.map",
     "runtime-main.js": "/artifact-web/static/js/runtime-main.8ff6ae7a.js",
     "runtime-main.js.map": "/artifact-web/static/js/runtime-main.8ff6ae7a.js.map",
     "static/css/2.2c227ec5.chunk.css": "/artifact-web/static/css/2.2c227ec5.chunk.css",
@@ -47,6 +47,6 @@
     "static/css/2.2c227ec5.chunk.css",
     "static/js/2.2caadaa5.chunk.js",
     "static/css/main.d8357a35.chunk.css",
-    "static/js/main.cf1b3c1a.chunk.js"
+    "static/js/main.fad67e30.chunk.js"
   ]
 }
