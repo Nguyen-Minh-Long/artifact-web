@@ -78,7 +78,7 @@ const Characters = {
       Ly: {
         type: "Dòng Hồi Ức",
         name: "Ly",
-        command: "!giveart 24191 15009 atk% em cr,6 cdmg,6 21",
+        command: "!giveart 24191 15009 atk% em cr,6 cdmg 21",
         img: "https://img.game8.co/3397426/c7e39a858bee158ca040e0032dcfbb41.png/show"
       }
       ,
